@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Rest-Assured API Test Suite">
+
+    <test name="Booking E2E Tests">
+        <classes>
+            <class name="com.booking.BookingE2ETest">
+                <methods>
+                    <include name="createBookingTest"/>
+                    <include name="getBookingTest"/>
+                    <include name="updateBookingTest"/>
+                    <include name="updatePartialBookingTest"/>
+                    <include name="deleteBookingTest"/>
+                    <include name="checkBookingIsDeleted"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Booking JSON Data Validation Tests">
+        <classes>
+            <class name="com.booking.JsonDataValidationTest">
+                <methods>
+                    <include name="testCreateBookingJsonSchema"/>
+                    <include name="testGetBookingJsonSchema"/>
+                    <include name="testUpdateBookingJsonSchema"/>
+                    <include name="testUpdatePartialBookingJsonSchema"/>
+                    <include name="testCreateJsonSchema"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
